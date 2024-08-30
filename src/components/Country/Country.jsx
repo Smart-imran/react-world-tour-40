@@ -18,7 +18,7 @@ const Country = ({country}) => {
             <h3>Population: {population}</h3>
             <p><small>Code: {cca3} </small></p>
             <img src={flags.png} alt="" />
-            <button onClick={handleVisited}>{visited ? 'Done' : 'pending'}</button>
+            <button onClick={handleVisited}>{visited ? 'Visited' : 'Going'}</button>
             {
                 visited ? "I visited this country" : "I want to visit"
             }
