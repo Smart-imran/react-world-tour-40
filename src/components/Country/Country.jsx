@@ -8,7 +8,7 @@ const Country = ({country}) => {
     const [visited,setVisited] = useState(false);
 
     const handleVisited = () =>{
-        setVisited(true)
+        setVisited(!visited)
     }
 
     const {name, flags, population, cca3} = country
@@ -18,9 +18,9 @@ const Country = ({country}) => {
             <h3>Population: {population}</h3>
             <p><small>Code: {cca3} </small></p>
             <img src={flags.png} alt="" />
-            <button onClick={handleVisited}>Visited</button>
+            <button onClick={handleVisited}>{visited ? 'Done' : 'pending'}</button>
             {
-                visited && "I d=visited this country"
+                visited ? "I visited this country" : "I want to visit"
             }
         </div>
     );
