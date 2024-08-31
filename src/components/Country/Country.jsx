@@ -13,8 +13,8 @@ const Country = ({country}) => {
 
     const {name, flags, population, cca3} = country
     return (
-        <div className="country">
-            <h3>Name: {name.common}</h3>
+        <div className={`country ${visited && 'visited'}`}>
+            <h3 style={{color: visited ? 'green' : 'red'}}>Name: {name.common}</h3>
             <h3>Population: {population}</h3>
             <p><small>Code: {cca3} </small></p>
             <img src={flags.png} alt="" />
